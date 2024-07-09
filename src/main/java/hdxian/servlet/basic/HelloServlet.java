@@ -12,6 +12,7 @@ import java.io.IOException;
 public class HelloServlet extends HttpServlet {
 
     // 해당 클래스에 매핑된 url이 호출되면 서블릿 컨테이너가 service() 메서드를 실행한다.
+    // 비슷한 시그니처의 service() 주의 (protected가 아님)
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         System.out.println("HelloServlet.service");
