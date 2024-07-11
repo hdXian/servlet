@@ -14,6 +14,7 @@ public class RequestHeaderServlet extends HttpServlet {
 
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        System.out.println("--- new request has occurred ---");
         printStartLine(request);
         printHeaders(request);
         printHeadersUtils(request);
@@ -94,12 +95,12 @@ public class RequestHeaderServlet extends HttpServlet {
         // http 메시지 정보는 아님.
         System.out.println("--- start of etc info ----");
 
-        System.out.println("Remote info");
+        System.out.println("Remote info"); // 요청 보낸 쪽 정보
         System.out.println("request.getRemoteHost(): " + request.getRemoteHost());
         System.out.println("request.getRemoteAddr(): " + request.getRemoteAddr());
         System.out.println("request.getRemotePort(): " + request.getRemotePort());
 
-        System.out.println("Local info");
+        System.out.println("Local info"); // 요청 받은 쪽 정보
         System.out.println("request.getLocalName(): " + request.getLocalName());
         System.out.println("request.getLocalAddr(): " + request.getLocalAddr());
         System.out.println("request.getLocalPort(): " + request.getLocalPort());
