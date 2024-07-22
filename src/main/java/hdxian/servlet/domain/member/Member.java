@@ -1,4 +1,4 @@
-package hdxian.servlet.domain;
+package hdxian.servlet.domain.member;
 
 import lombok.Getter;
 import lombok.Setter;

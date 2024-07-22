@@ -1,8 +1,5 @@
 package hdxian.servlet.domain.member;
 
-import hdxian.servlet.domain.Member;
-import hdxian.servlet.domain.MemberRepository;
-import org.assertj.core.api.Assert;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;

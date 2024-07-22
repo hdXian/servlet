@@ -1,7 +1,7 @@
 package hdxian.servlet.web.servlet;
 
-import hdxian.servlet.domain.Member;
-import hdxian.servlet.domain.MemberRepository;
+import hdxian.servlet.domain.member.Member;
+import hdxian.servlet.domain.member.MemberRepository;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
