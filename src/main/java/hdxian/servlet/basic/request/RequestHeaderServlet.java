@@ -8,6 +8,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 @WebServlet(name = "requestHeaderServlet", urlPatterns = "/request-header")
 public class RequestHeaderServlet extends HttpServlet {
@@ -19,6 +20,8 @@ public class RequestHeaderServlet extends HttpServlet {
         printHeaders(request);
         printHeadersUtils(request);
         printEtc(request);
+        PrintWriter writer = response.getWriter();
+        writer.write("request successfully accepted. check the server console.");
     }
 
     private void printStartLine(HttpServletRequest request) {
