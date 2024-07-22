@@ -23,7 +23,7 @@ public class MemberRepository {
     }
 
     // save Member
-    // auto generate id by sequence
+    // auto generate id with sequence
     public Member save(Member member) {
         member.setId(++sequence);
         store.put(member.getId(), member);
