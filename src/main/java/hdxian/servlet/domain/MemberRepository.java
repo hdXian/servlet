@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+// thread unsafe code. using ConcurrentHashMap or AtomicLong is recommended.
 public class MemberRepository {
 
     private static Map<Long, Member> store = new HashMap<>();
