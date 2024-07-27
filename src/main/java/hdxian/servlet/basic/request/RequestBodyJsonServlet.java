@@ -33,7 +33,7 @@ public class RequestBodyJsonServlet extends HttpServlet {
         System.out.println("username = " + helloData.getUsername());
         System.out.println("age = " + helloData.getAge());
 
-        response.getWriter().write("ok");
+        response.getWriter().write("request successfully accepted. check the server console.");
 
     }
 

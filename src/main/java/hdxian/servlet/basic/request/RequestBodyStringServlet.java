@@ -23,7 +23,7 @@ public class RequestBodyStringServlet extends HttpServlet {
         // byteCode -> character utils. must provide charset.
         String bodyString = StreamUtils.copyToString(inputStream, StandardCharsets.UTF_8);
         System.out.println("bodyString = " + bodyString);
-        response.getWriter().write("ok");
+        response.getWriter().write("request successfully accepted. check the server console.");
 
     }
 }
