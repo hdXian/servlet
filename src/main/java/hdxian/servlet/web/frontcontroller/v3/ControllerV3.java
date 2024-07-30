@@ -5,6 +5,6 @@ import hdxian.servlet.web.frontcontroller.ModelView;
 import java.util.Map;
 
 public interface ControllerV3 {
-    // get params from Map<String, String> v2 - HttpServletRequest
+    // get params from Map<String, String> (v2 - HttpServletRequest)
     ModelView process(Map<String, String> paramMap);
 }
