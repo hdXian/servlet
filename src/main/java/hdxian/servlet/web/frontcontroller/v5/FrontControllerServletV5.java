@@ -6,7 +6,7 @@ import hdxian.servlet.web.frontcontroller.MyView;
 import hdxian.servlet.web.frontcontroller.v3.controller.MemberFormControllerV3;
 import hdxian.servlet.web.frontcontroller.v3.controller.MemberListControllerV3;
 import hdxian.servlet.web.frontcontroller.v3.controller.MemberSaveControllerV3;
-import hdxian.servlet.web.frontcontroller.v5.handleradapter.MyHandlerAdapterV3;
+import hdxian.servlet.web.frontcontroller.v5.adapter.ControllerV3HandlerAdapter;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -32,7 +32,7 @@ public class FrontControllerServletV5 extends HttpServlet {
     }
 
     private void initHandlerAdapters() {
-        handlerAdapters.add(new MyHandlerAdapterV3());
+        handlerAdapters.add(new ControllerV3HandlerAdapter());
     }
 
     private void initHandlerMappingMap() {

@@ -1,4 +1,4 @@
-package hdxian.servlet.web.frontcontroller.v5.handleradapter;
+package hdxian.servlet.web.frontcontroller.v5.adapter;
 
 import hdxian.servlet.web.frontcontroller.ModelView;
 import hdxian.servlet.web.frontcontroller.MyHandlerAdapter;
@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-public class MyHandlerAdapterV3 implements MyHandlerAdapter {
+public class ControllerV3HandlerAdapter implements MyHandlerAdapter {
 
     // check handler is compatible with ControllerV3
     @Override
