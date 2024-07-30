@@ -1,20 +1,17 @@
-package hdxian.servlet.web.servletmvc;
+package hdxian.servlet.web.frontcontroller.v1.controller;
 
+import hdxian.servlet.web.frontcontroller.v1.ControllerV1;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
-@WebServlet(name = "mvcMemberFormServlet", urlPatterns = "/servlet-mvc/members/new-form")
-public class MvcMemberFormServlet extends HttpServlet {
+public class MemberFormControllerV1 implements ControllerV1 {
 
     @Override
-    protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+    public void process(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // form jsp file path
         String viewPath = "/WEB-INF/views/new-form.jsp";
 
@@ -25,5 +22,4 @@ public class MvcMemberFormServlet extends HttpServlet {
         // server calls to /WEB-INF/views/new-form.jsp internally
         dispatcher.forward(request, response);
     }
-
 }
