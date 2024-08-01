@@ -10,17 +10,18 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.List;
 
 @Controller
+@RequestMapping("/springmvc/v2/members")
 public class SpringMemberControllerV2 {
 
     private final MemberRepository repository = MemberRepository.getInstance();
 
-    @RequestMapping("/springmvc/v2/members/new-form")
+    @RequestMapping("/new-form")
     public ModelAndView newForm() {
         // just return modelView named "new-form"
         return new ModelAndView("new-form");
     }
 
-    @RequestMapping("/springmvc/v2/members/save")
+    @RequestMapping("/save")
     public ModelAndView save(HttpServletRequest request) {
         // get query params from Map
         String username = request.getParameter("username");
@@ -37,7 +38,8 @@ public class SpringMemberControllerV2 {
         return mv;
     }
 
-    @RequestMapping("/springmvc/v2/members")
+    // Mapped "/springmvc/v2/members" (class level default)
+    @RequestMapping
     public ModelAndView members() {
         List<Member> members = repository.findAll();
 
