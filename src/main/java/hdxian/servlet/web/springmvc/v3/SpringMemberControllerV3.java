@@ -4,9 +4,7 @@ import hdxian.servlet.domain.member.Member;
 import hdxian.servlet.domain.member.MemberRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -16,12 +14,14 @@ public class SpringMemberControllerV3 {
 
     private final MemberRepository repository = MemberRepository.getInstance();
 
-    @RequestMapping(value = "/new-form", method = RequestMethod.GET)
+//    @RequestMapping(value = "/new-form", method = RequestMethod.GET)
+    @GetMapping("/new-form")
     public String newForm() {
         return "new-form";
     }
 
-    @RequestMapping(value = "/save", method = RequestMethod.POST)
+//    @RequestMapping(value = "/save", method = RequestMethod.POST)
+    @PostMapping("/save")
     public String save(@RequestParam("username") String username,
                        @RequestParam("age") int age,
                        Model model) {
@@ -34,8 +34,8 @@ public class SpringMemberControllerV3 {
         return "save";
     }
 
-    // Mapped "/springmvc/v2/members" (class level default)
-    @RequestMapping(method = RequestMethod.GET)
+//    @RequestMapping(method = RequestMethod.GET)
+    @GetMapping
     public String members(Model model) {
         List<Member> members = repository.findAll();
 
