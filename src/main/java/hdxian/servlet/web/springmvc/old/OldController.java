@@ -9,11 +9,11 @@ import org.springframework.web.servlet.mvc.Controller;
 // register bean by url
 // HandlerMapping - BeanNameUrlHandlerMapping
 // HandlerAdapter - SimpleControllerHandlerAdapter (ex. implements interface Controller)
-@Component("/springmvc/old-controller")
+@Component("/springmvc/old-controller") // if beanName.startsWith("/") -> mapping as handler...
 public class OldController implements Controller {
     @Override
     public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
         System.out.println("OldController.handleRequest");
-        return null;
+        return new ModelAndView("new-form");
     }
 }
